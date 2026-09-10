@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="form-container">
+
+        <h2>
+            Book Appointment
+        </h2>
+
+        <h4>
+            {{ doctor.name }}
+        </h4>
+
+        <p>
+            {{ doctor.specialization }}
+        </p>
+
+
+        <form method="POST">
+
+            <label>
+                Appointment Date
+            </label>
+
+            <input
+                type="date"
+                name="date"
+                class="form-control mb-3"
+                required>
+
+
+            <label>
+                Appointment Time
+            </label>
+
+            <select
+                name="time"
+                class="form-control mb-3"
+                required>
+
+                <option value="">
+                    Select Time
+                </option>
+
+                <option value="09:00">
+                    09:00 AM
+                </option>
+
+                <option value="10:00">
+                    10:00 AM
+                </option>
+
+                <option value="11:00">
+                    11:00 AM
+                </option>
+
+                <option value="14:00">
+                    02:00 PM
+                </option>
+
+                <option value="15:00">
+                    03:00 PM
+                </option>
+
+                <option value="16:00">
+                    04:00 PM
+                </option>
+
+            </select>
+
+
+            <button
+                class="btn btn-primary w-100">
+
+                Confirm Appointment
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
