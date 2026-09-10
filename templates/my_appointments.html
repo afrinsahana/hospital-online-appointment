@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2>
+        My Appointments
+    </h2>
+
+    <div class="table-responsive mt-4">
+
+        <table class="table table-bordered">
+
+            <thead class="table-primary">
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Doctor</th>
+
+                    <th>Specialization</th>
+
+                    <th>Hospital</th>
+
+                    <th>Date</th>
+
+                    <th>Time</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for appointment in appointments %}
+
+                <tr>
+
+                    <td>
+                        {{ appointment.id }}
+                    </td>
+
+                    <td>
+                        {{ appointment.doctor_name }}
+                    </td>
+
+                    <td>
+                        {{ appointment.specialization }}
+                    </td>
+
+                    <td>
+                        {{ appointment.hospital_name }}
+                    </td>
+
+                    <td>
+                        {{ appointment.appointment_date }}
+                    </td>
+
+                    <td>
+                        {{ appointment.appointment_time }}
+                    </td>
+
+                    <td>
+                        {{ appointment.status }}
+                    </td>
+
+                    <td>
+
+                        {% if appointment.status == "Confirmed" %}
+
+                        <a
+                        href="{{ url_for(
+                        'cancel_appointment',
+                        appointment_id=appointment.id
+                        ) }}"
+                        class="btn btn-danger btn-sm">
+
+                        Cancel
+
+                        </a>
+
+                        {% endif %}
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
