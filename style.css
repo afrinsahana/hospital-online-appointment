@@ -1,0 +1,95 @@
+body {
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #6610f2
+    );
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.department-card {
+    transition: 0.3s;
+}
+
+.department-card:hover {
+    transform: translateY(-8px);
+}
+
+.hospital-card {
+    height: 100%;
+    transition: 0.3s;
+}
+
+.hospital-card:hover {
+    transform: translateY(-5px);
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.welcome-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.ai-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.user-message {
+    background: #e7f1ff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.ai-message {
+    background: #f1f1f1;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.doctor-result {
+    background: #e8f5e9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #212529;
+    color: white;
+}
