@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2 class="mb-4">
+        Available Doctors
+    </h2>
+
+    <div class="row">
+
+        {% for doctor in doctors %}
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <h4>
+                        {{ doctor.name }}
+                    </h4>
+
+                    <p>
+                        {{ doctor.specialization }}
+                    </p>
+
+                    <p>
+                        Experience:
+                        {{ doctor.experience }} years
+                    </p>
+
+                    <a
+                    href="{{ url_for('appointment',
+                    doctor_id=doctor.id) }}"
+                    class="btn btn-success">
+
+                    Book Appointment
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
