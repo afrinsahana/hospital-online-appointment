@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="ai-container">
+
+        <h2>
+            🤖 AI Appointment Assistant
+        </h2>
+
+        <p>
+            Tell me what type of doctor you need.
+        </p>
+
+
+        <div id="chatBox"
+             class="chat-box">
+
+        </div>
+
+
+        <div class="input-group mt-3">
+
+            <input
+                type="text"
+                id="message"
+                class="form-control"
+                placeholder="Example: I need a heart doctor">
+
+            <button
+                onclick="askAI()"
+                class="btn btn-primary">
+
+                Send
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
