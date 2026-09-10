@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="container text-center">
+
+        <h1>
+            Hospital Online Appointment
+        </h1>
+
+        <p>
+            Find doctors and book appointments easily.
+        </p>
+
+        <a
+            href="{{ url_for('hospitals') }}"
+            class="btn btn-light btn-lg">
+
+            Find Hospitals
+
+        </a>
+
+        <a
+            href="{{ url_for('ai_assistant') }}"
+            class="btn btn-warning btn-lg">
+
+            AI Assistant
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">
+        Medical Departments
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+
+            <div class="card department-card">
+
+                <div class="card-body text-center">
+
+                    <h3>👁️</h3>
+
+                    <h5>Eye</h5>
+
+                    <a
+                    href="/hospitals?department=Eye"
+                    class="btn btn-primary">
+
+                    View
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="card department-card">
+
+                <div class="card-body text-center">
+
+                    <h3>🦷</h3>
+
+                    <h5>Dental</h5>
+
+                    <a
+                    href="/hospitals?department=Dental"
+                    class="btn btn-primary">
+
+                    View
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="card department-card">
+
+                <div class="card-body text-center">
+
+                    <h3>❤️</h3>
+
+                    <h5>Cardiology</h5>
+
+                    <a
+                    href="/hospitals?department=Cardiology"
+                    class="btn btn-primary">
+
+                    View
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="card department-card">
+
+                <div class="card-body text-center">
+
+                    <h3>🧠</h3>
+
+                    <h5>Neurology</h5>
+
+                    <a
+                    href="/hospitals?department=Neurology"
+                    class="btn btn-primary">
+
+                    View
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
