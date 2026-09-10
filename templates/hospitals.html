@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2 class="mb-4">
+        Hospitals
+    </h2>
+
+    <div class="row g-4">
+
+        {% for hospital in hospitals %}
+
+        <div class="col-md-4">
+
+            <div class="card hospital-card">
+
+                <div class="card-body">
+
+                    <h4>
+                        {{ hospital.name }}
+                    </h4>
+
+                    <p>
+                        <strong>Department:</strong>
+                        {{ hospital.department }}
+                    </p>
+
+                    <p>
+                        📍 {{ hospital.location }}
+                    </p>
+
+                    <p>
+                        {{ hospital.description }}
+                    </p>
+
+                    <a
+                    href="{{ url_for('doctors', hospital_id=hospital.id) }}"
+                    class="btn btn-primary">
+
+                    View Doctors
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
